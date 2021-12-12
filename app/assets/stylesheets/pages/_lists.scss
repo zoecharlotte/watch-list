@@ -16,14 +16,13 @@
   color: rgba(0,0,0,0.7);
   background-color: #EEEEEE;
   width: 300px;
-  font-size: 24px;
   border: solid 1px rgba(0,0,0,0.7);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .movie-card-category h4 {
-  // color: ;
+  text-align: center;
 }
 
 .movie-card-category a:link {
@@ -69,31 +68,51 @@
   padding: 20px 0;
 }
 
-.each {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cards {
+.list-cards {
+  margin: 96px 96px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 35px;
+  .each-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 300px;
+  }
 }
 
-.card-category {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: rgba(0,0,0,0.7);
-  background-color: #EEEEEE;
-  width: 300px;
-  font-size: 18px;
-  border: solid 1px rgba(0,0,0,0.7);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+.to-each-list:hover {
+  text-decoration: none;
 }
+
+
+
+.to-each-list {
+  justify-self: center;
+}
+
+
+.list-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// .card-category {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   color: rgba(0,0,0,0.7);
+//   background-color: #EEEEEE;
+//   width: 300px;
+//   font-size: 18px;
+//   border: solid 1px rgba(0,0,0,0.7);
+//   border-radius: 5px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+// }
 
 .card-category a:link {
   text-decoration: none;

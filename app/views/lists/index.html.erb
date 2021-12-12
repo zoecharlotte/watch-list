@@ -1,14 +1,16 @@
 <h1 class="text-center">My Lists</h1>
-<div class="cards">
+<div class="list-cards">
   <% @lists.each do |list| %>
-    <div class="each">
-      <div class="card-category">
-        <h3><%= link_to list.name, list_path(list) %></h3> <%= link_to "Delete List", list_path(list), method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to list_path(list), class:"to-each-list" do %>
+      <div class="each-list">
+        <%= cl_image_tag list.photo.key, class:"list-photo", crop: :fill %>
+        <h3><%= list.name %></h3>
+        <%# <p> <%= link_to "Delete List", list_path(list), method: :delete, data: { confirm: "Are you sure?" }</p> %>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
-<div class="bottom-message">
+
   <div class="text-center">
   <p><%= link_to "Create List", new_list_path %></p>
   </div>

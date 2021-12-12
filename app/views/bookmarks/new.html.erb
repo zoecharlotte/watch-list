@@ -2,11 +2,12 @@
   <div>
     <%= f.input :comment %>
     <%= f.association :movie %>
+
   </div>
   <div class="btn btn-primary">
     <%= f.button :submit %>
   </div>
 <% end %>
 <div>
-  <%= link_to "Back", new_list_bookmark_path(@list) %>
+  <%= link_to "Back", list_path(@list) %>
 </div>
